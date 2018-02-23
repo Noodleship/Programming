@@ -2,45 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Moving : MonoBehaviour
+namespace Asteroids
 {
-    public float rotationSpeed = 360;
-    public float movementSpeed = 10;
-    
-    // Update is called once per frame
-
-    void Movement()
+    public class Moving : MonoBehaviour
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        public float rotationSpeed = 360;
+        public float movementSpeed = 10;
+
+        // Update is called once per frame
+
+        void Movement()
         {
-            //Vector3 position = transform.position;
-            //position.y += movementSpeed * Time.deltaTime;
-            //transform.position = position;
-            transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                //Vector3 position = transform.position;
+                //position.y += movementSpeed * Time.deltaTime;
+                //transform.position = position;
+                transform.Translate(Vector3.up * movementSpeed * Time.deltaTime);
+            }
+
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
+            }
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        void Rotation()
         {
-            transform.Translate(Vector3.down * movementSpeed * Time.deltaTime);
-        }
-    }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
+            }
 
-    void Rotation()
-    {
-        if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+            }
+        }
+
+        void Update()
         {
-            transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
+            Movement();
+            Rotation();
         }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
-        }
-    }
-
-    void Update()
-    {
-        Movement();
-        Rotation();
     }
 }
