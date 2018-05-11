@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.AI;
+
 namespace GoneHome
 {
     public class FollowEnemy : MonoBehaviour
     {
         public Transform target;
-
         private NavMeshAgent agent;
 
         private Vector3 spawnPoint;
@@ -33,6 +33,5 @@ namespace GoneHome
             transform.position = spawnPoint;
             agent.enabled = true;
         }
-
     }
 }
