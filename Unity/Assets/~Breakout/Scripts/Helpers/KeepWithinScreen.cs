@@ -42,7 +42,7 @@ namespace Breakout
             {
                 pos.x = camBounds.max.x - halfWidth;
             }
-            if (pos.y - halfHeight <camBounds.min.y)
+            if (pos.y - halfHeight < camBounds.min.y)
             {
                 pos.y = camBounds.min.y + halfHeight;
             }
@@ -52,7 +52,7 @@ namespace Breakout
             }
             return pos;
         }
-            // Update is called once per frame
+        // Update is called once per frame
         void Update()
         {
             UpdateCamBounds();

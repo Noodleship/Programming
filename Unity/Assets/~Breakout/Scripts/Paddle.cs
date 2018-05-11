@@ -32,7 +32,7 @@ namespace Breakout
                 Fire();
             }
         }
-        
+
         void Movement()
         {
             float inputH = Input.GetAxis("Horizontal");
