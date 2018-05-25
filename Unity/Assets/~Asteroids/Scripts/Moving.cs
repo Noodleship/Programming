@@ -41,6 +41,11 @@ namespace Asteroids
             {
                 transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
             }
+
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
+            }
         }
 
         // TASK: Make a 'Rotation()' function and put rotation code in it
