@@ -8,6 +8,7 @@ namespace Breakout
     {
         public float movementSpeed = 10;
         public Ball currentBall;
+        public bool hasFired;//true or false state default starts false
         public Vector3[] directions =
         {
             new Vector2(-.5f, .5f),
@@ -16,6 +17,8 @@ namespace Breakout
         // Use this for initialization
         void Start()
         {
+            hasFired = false;//we start the game and havent fired the ball
+
             currentBall = GetComponentInChildren<Ball>();
         }
 
@@ -24,13 +27,18 @@ namespace Breakout
             currentBall.transform.SetParent(null);
             Vector3 randomDir = directions[Random.Range(0, directions.Length)];
             currentBall.Fire(randomDir);
+            hasFired = true;//once we fire the ball we state that we have fired the ball
         }
         void CheckInput()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if(!hasFired)//can only fire ball if we havent already
             {
-                Fire();
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Fire();
+                }
             }
+            
         }
 
         void Movement()

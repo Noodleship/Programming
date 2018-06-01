@@ -147,6 +147,7 @@
     <Compile Include="Assets\~Asteroids\Scripts\Shooting.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\Test_scripts\Moving_test.cs" />
     <Compile Include="Assets\~Breakout\Scripts\Ball.cs" />
+    <Compile Include="Assets\~Breakout\Scripts\Destroy.cs" />
     <Compile Include="Assets\~Breakout\Scripts\Helpers\KeepWithinScreen.cs" />
     <Compile Include="Assets\~Breakout\Scripts\Paddle.cs" />
     <Compile Include="Assets\~GoneHome\Scripts\Death.cs" />
