@@ -142,6 +142,10 @@
     <Compile Include="Assets\~AHundredBalls\Scripts\Bucket.cs" />
     <Compile Include="Assets\~AHundredBalls\Scripts\Paddle.cs" />
     <Compile Include="Assets\~AHundredBalls\Scripts\Spawner.cs" />
+    <Compile Include="Assets\~Assessment1\Scripts\Collect.cs" />
+    <Compile Include="Assets\~Assessment1\Scripts\GameManager.cs" />
+    <Compile Include="Assets\~Assessment1\Scripts\Goal.cs" />
+    <Compile Include="Assets\~Assessment1\Scripts\Movement.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\AsteroidSpawner.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\Moving.cs" />
     <Compile Include="Assets\~Asteroids\Scripts\Shooting.cs" />
